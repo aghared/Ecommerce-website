@@ -1,0 +1,21 @@
+.one {
+    color: rgb(255, 0, 0);
+    font-size: medium;
+}
+
+h1 {
+    background-color: rgba(0, 195, 255, 0.349);
+    background-image: url(../imag/1600w-_Tcjok-d9b4.webp);
+    padding: 10px;
+    margin: 5px;
+    border: 3px;
+    border-color: brown rgba(41, 123, 97, 0.655) rgb(0, 251, 255) gold;
+    border-style: outset;
+
+}
+
+h1 {
+    background-color: rgba(0, 195, 255, 0.349);
+    background-image: url(../imag/1600w-_Tcjok-d9b4.webp);
+
+}
