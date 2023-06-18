@@ -1,3 +1,3 @@
-# Group3_Project
+# eCommerce-website
 Form COPMPE 561 project 
 ## project note 
