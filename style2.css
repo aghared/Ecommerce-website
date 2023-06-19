@@ -1,0 +1,16 @@
+.soft-red-bg {
+    background-color: #ffcccc; /* this is a soft red */
+    color: #000; /* you may want to adjust text color to ensure it's readable, here it's black */
+}
+
+.soft-red-text {
+    color: #ffcccc; /* this is a soft red */
+}
+
+.custom-margin {
+    margin-top: 200px;
+}
+
+.custom-padding {
+    padding-top: 50px
+}
