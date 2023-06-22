@@ -9,3 +9,15 @@ function addImage(image){
     document.getElementById('scroll-container-History').append(image_el)
    
 }
+function addImageLink(image,link){
+    const image_link = document.createElement('a')
+    image_link.setAttribute("href", link)
+    image_link.setAttribute('id', link)
+    document.getElementById('scroll-container-History').appendChild(image_link)
+
+    const image_el = document.createElement('img')
+    image_el.setAttribute('src', image)
+    document.getElementById(link).appendChild(image_el)
+
+    
+} 
