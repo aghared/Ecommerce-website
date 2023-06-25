@@ -1,0 +1,30 @@
+body {
+    background-color: aliceblue;
+    font-family: 'Courier New';
+ 
+}
+
+h2.Recomendation {
+    text-align: center;
+}
+h2.history {
+    text-align: center;
+}
+div.Recomendation{
+    background-color: white;
+}
+div.history {
+    background-color: white;
+}
+.scroll-container{
+
+    background-color: white;
+    overflow: auto;
+    white-space: nowrap;
+    padding: 10px;
+}
+.scroll-container img{
+    padding: 10px;
+    width:  200px;
+    height: 200px;
+}

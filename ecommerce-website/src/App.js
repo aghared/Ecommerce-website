@@ -1,5 +1,4 @@
 import React from 'react';
-//import React, {Component} from 'react';
 import { Link, Route, Routes } from 'react-router-dom';
 //import './App.css';
 import { ProductPageHome  } from './pages/Product_Page_Home';
