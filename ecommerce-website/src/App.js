@@ -16,7 +16,7 @@ function App() {
   <Routes>
     {/* Add pages here*/}
     <Route path="/" element={<ProductPageHome />}/>
-    <Route path="/Product_Page" element={<ProductPage/>} />
+    <Route path="/Product_Page/:id" exact element={<ProductPage/>} />
 
   </Routes>
   </React.Fragment>
