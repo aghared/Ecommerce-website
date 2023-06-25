@@ -1,0 +1,90 @@
+/* to style the logo */
+.ecumenic {
+    float: left;
+    align-items: center;
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.ecumenic p {
+
+    margin: 1;
+    font-weight: bold;
+    color: #333;
+}
+.navbar {
+    background-color: #ac6868;
+    /* Set the background color of the navbar */
+    overflow: hidden;
+    /* Hide any content that overflows from the navbar */
+}
+
+.navbar a {
+    float: left;
+    /* Float the navigation links to the left */
+    color: white;
+    /* Set the color of the navigation links */
+    text-align: center;
+    /* Center the text within the links */
+    padding: 14px 16px;
+    /* Add some padding around the links */
+    text-decoration: none;
+    /* Remove underline from the links */
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    /* Add a background color when hovering over the links */
+    color: black;
+    /* Change the color of the links when hovering */
+}
+
+/* CSS for search bar styling */
+.search-bar {
+    display: flex;
+    /* Display the search bar and button in a row */
+    align-items: center;
+    /* Align items vertically within the search bar */
+    max-width: 800px;
+    /* Set a maximum width for the search bar container */
+}
+
+.search-input {
+    width: 400%;
+    /* Take up the full width available within the search bar container */
+    padding: 8px;
+    /* Add some padding to the input field */
+    border: 1px solid #ccc;
+    /* Add a border to the input field */
+    border-radius: 4px;
+    /* Add rounded corners to the input field */
+}
+
+.search-button {
+    background-color: #c17979;
+    /* Set the background color of the search button */
+    color: white;
+    /* Set the color of the search button text */
+    padding: 8px 12px;
+    /* Add padding to the search button */
+    border: none;
+    /* Remove the border from the search button */
+    border-radius: 4px;
+    /* Add rounded corners to the search button */
+    margin-left: 8px;
+    /* Add some space between the input field and the button */
+}
+
+.search-button:hover {
+    background-color: #b96d6d;
+    /* Change the background color of the search button when hovering */
+}
+
+/* for aside bar */
+.aside-bar {
+    float: right;
+    background-color: #f8f9fa;
+    /* Use Bootstrap's default light gray background color */
+    padding: 20px;
+    width: 300px;
+}

@@ -1,20 +1,18 @@
 import React from 'react';
-import { Link, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
-
+//import componets here
+import Navbar from './componet/navbar';
 //import pages here 
 import { ProductPageHome  } from './pages/Product_Page_Home';
 import { ProductPage } from './pages/Product_Page';
 
 function App() {
   return (
+   
   <React.Fragment>
-  <nav>
-    <ul>
-      {/* Add navbar link here */}
-      <li><Link to="/"> Product Home</Link></li>
-    </ul>
-  </nav>
+  <nav><Navbar/></nav>
+  
   <Routes>
     {/* Add pages here*/}
     <Route path="/" element={<ProductPageHome />}/>
