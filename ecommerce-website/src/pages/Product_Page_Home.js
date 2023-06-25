@@ -1,47 +1,12 @@
 import React from 'react';
 import './Product_Page_Home_Style.css'
 import { Link } from 'react-router-dom';
+import product from '../data/product-data.json' 
 
 
-const product = [ {
-                    id: 0,
-                    image:'/assets/Products/sausage-thing.jpg',
-                    productName: "Item 0",
-                    price: 13,
-                    prodcutDescription: "This is Item 0"
-                },
-                 {
-                    id: 1,
-                    image:'/assets/Products/cake.jpeg',
-                    productName: "Item 1",
-                    price: 23,
-                    prodcutDescription: "This is Item 1"
-                 },
-                 {
-                    id: 2,
-                    image:'/assets/Products/pasta.jpeg',
-                    productName: "Item 2",
-                    price: 33,
-                    prodcutDescription: "This is Item 2"
-                },
-                 {
-                    id: 3,
-                    image:'/assets/Products/pizza.jpeg',
-                    productName: "Item 3",
-                    price: 43,
-                    prodcutDescription: "This is Item 3"
-                
-                },
-                 {
-                    id: 4,
-                    image:'/assets/Products/rice-and-noodles.jpeg',
-                    productName: "Item 4",
-                    price: 53,
-                    prodcutDescription: "This is Item 4"
-                }
-                
-                ]
 export function ProductPageHome(props){
+    
+   // const prod = JSON.parse(product) 
     return   (  
     <React.Fragment>
     <div id="Recomendation">
