@@ -7,6 +7,10 @@ const Navbar = () => {
              <div class="ecumenic">
                  <p>eCommerce3</p>
              </div>
+             <div class="search-bar">
+                 <input type="text" class="search-input" placeholder="Search..."/>
+                 <button class="search-button">Search</button>
+             </div>
             <div class="navbar">
                  <Link to="/">Home</Link>
                 <Link to="/about">About</Link>
