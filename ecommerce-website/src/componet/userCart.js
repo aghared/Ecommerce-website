@@ -11,7 +11,6 @@ export function UserCart({userId, data, deleteTask}) {
     user.cart.map((item, index) => {
       const product = data.products.find((product) => product.id === item.productId);
       
-
       if (!product) {
         return null;
       }
