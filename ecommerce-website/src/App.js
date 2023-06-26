@@ -9,7 +9,8 @@ import { ProductPage } from './pages/Product_Page';
 import { ShoppingCart } from './pages/ShoppingCart';
 import { CheckoutPage } from './pages/CheckoutPage';
 import { RegistrationPage } from './pages/RegistrationPage';
-
+import { ContactUsPage } from './pages/ContactUsPage';
+import { SignInPage } from './pages/SignInPage';
 
 function App() {
   return (
@@ -19,11 +20,14 @@ function App() {
   
   <Routes>
     {/* Add pages here*/}
-    <Route path="/" element={<ProductPageHome />}/>
+    <Route path="/home" element={<ProductPageHome />}/>
     <Route path="/Product_Page/:id" exact element={<ProductPage/>} />
     <Route path="/checkout/" exact element={<CheckoutPage/>} />
     <Route path="/shoppingcart/" exact element={<ShoppingCart/>} />
     <Route path="/signup" element={<RegistrationPage />} />
+    <Route path="/contact" element={<ContactUsPage />} />
+    <Route path="/" element={<SignInPage />} />
+
     
     
 
