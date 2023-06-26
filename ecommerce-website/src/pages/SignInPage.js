@@ -13,14 +13,14 @@ export function SignInPage(){
         <h2 id="sign">Sign In</h2>
         <form id="signup-form">
           <label id="user" htmlFor="username">Username:</label>
-          <input type="text" id="username" required />
+          <input type="text" id="input" required />
   
           <label id="user" htmlFor="password">Password:</label>
-          <input type="password" id="password" required />
+          <input type="password" id="input" required />
   
           <button id="butt" type="submit">Sign in</button>
           <div className="signup-link">
-            <p >
+            <p>
               Don't have an account? <Link to="/signup" id="signup-link">Sign Up</Link>
             </p>
           </div>
