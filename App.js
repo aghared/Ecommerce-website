@@ -2,6 +2,7 @@ import React from 'react';
 import './App.css'; // Import the CSS file
 import { BrowserRouter as Router, Link, Route, Routes, Outlet } from 'react-router-dom';
 import RegistrationPage from './RegistrationPage';
+import ContactUsPage from './ContactUsPage';
 
 const Home = () => (
   <div>
@@ -56,6 +57,7 @@ const Home = () => (
       <div className="footer-content">
         <p>&copy; 2023 eCommerce-website. All rights reserved.</p>
         <nav>
+          
           <Link to="/contact">Contact Us</Link>
         </nav>
       </div>
@@ -70,6 +72,7 @@ const App = () => {
         <Route path="/" element={<Outlet />}>
           <Route index element={<Home />} />
           <Route path="/signup" element={<RegistrationPage />} />
+          <Route path="/contact" element={<ContactUsPage />} />
         </Route>
       </Routes>
     </Router>

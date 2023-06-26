@@ -8,14 +8,14 @@ const RegistrationPage = () => {
         <h1>eCommerce-website</h1>
         <br />
         <nav className="navbar">
-          <Link to="/">Home</Link>
-          {/* <a href="Product_Page_Home.html">Product</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="shoppingCart.html">Cart</a>
-          <a href="#contact">Contact Us</a>
-          <a href="userProfile.html">User Profile</a> */}
-        </nav>
+        <Link to="/">Home</Link>
+        <Link to="/products">Product</Link>
+        <Link to="/about">About</Link>
+        <Link to="/services">Services</Link>
+        <Link to="/cart">Cart</Link>
+        <Link to="/contact">Contact Us</Link>
+        <Link to="/profile">User Profile</Link>
+      </nav>
         <br />
       </header>
 
@@ -41,6 +41,16 @@ const RegistrationPage = () => {
           <button type="submit">Register</button>
         </form>
       </div>
+      <footer>
+      <div className="footer-content">
+        <p>&copy; 2023 eCommerce-website. All rights reserved.</p>
+        <nav>
+          
+          <Link to="/contact">Contact Us</Link>
+        </nav>
+      </div>
+    </footer>
+    
     </div>
   );
 };
