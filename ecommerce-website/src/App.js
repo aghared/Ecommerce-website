@@ -11,6 +11,7 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { RegistrationPage } from './pages/RegistrationPage';
 import { ContactUsPage } from './pages/ContactUsPage';
 import { SignInPage } from './pages/SignInPage';
+import SearchResults from './pages/SearchResults';
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
     <Route path="/signup" element={<RegistrationPage />} />
     <Route path="/contact" element={<ContactUsPage />} />
     <Route path="/" element={<SignInPage />} />
+    <Route path="/search" element={<SearchResults />} />
 
     
     

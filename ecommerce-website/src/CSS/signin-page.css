@@ -32,7 +32,7 @@
     cursor: pointer;
 }
 
-#butt:hover {
+#hover {
     background-color: #b96d6d;
     /* Use Bootstrap's default primary color on hover */
 }
