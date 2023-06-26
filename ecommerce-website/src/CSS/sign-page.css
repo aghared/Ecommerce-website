@@ -1,0 +1,38 @@
+/* registration page style */
+.registration-form {
+    max-width: 400px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f8f9fa;
+}
+
+.registration-form h2 {
+    text-align: center;
+}
+
+.registration-form form label {
+    display: block;
+    margin-top: 10px;
+}
+
+.registration-form form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+.registration-form form button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #c17979;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.registration-form form button:hover {
+    background-color: #b96d6d;
+}
+

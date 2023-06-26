@@ -1,0 +1,53 @@
+/* for aside bar */
+.aside-bar {
+    float: right;
+    background-color: #f8f9fa;
+    /* Use Bootstrap's default light gray background color */
+    padding: 20px;
+    width: 300px;
+}
+
+h2 {
+    text-align: center;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #c17979;
+    /* Use Bootstrap's default primary color for the button background */
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #b96d6d;
+    /* Use Bootstrap's default primary color on hover */
+}
+
+
+ h1 {
+    background-color: rgba(0, 195, 255, 0.349);
+    /*background-image: url(imag/1600w-_Tcjok-d9b4.webp);*/
+    padding: 10px;
+    margin: 5px;
+    border: 3px solid;
+    border-color: brown rgba(41, 123, 97, 0.655) rgb(0, 251, 255) gold;
+    border-style: outset;
+
+}
+

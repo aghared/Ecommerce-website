@@ -1,5 +1,5 @@
 import React from 'react';
-import './Product_Page_Home_Style.css'
+import '../CSS/Product_Page_Home_Style.css'
 import { Link } from 'react-router-dom';
 import product from '../data/product-data.json' 
 
