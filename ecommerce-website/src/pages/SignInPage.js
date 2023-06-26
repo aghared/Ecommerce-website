@@ -10,17 +10,17 @@ export function SignInPage(){
         <br />
         <br />
         <aside className="aside-bar">
-        <h2>Sign In</h2>
+        <h2 id="sign">Sign In</h2>
         <form id="signup-form">
-          <label htmlFor="username">Username:</label>
+          <label id="user" htmlFor="username">Username:</label>
           <input type="text" id="username" required />
   
-          <label htmlFor="password">Password:</label>
+          <label id="user" htmlFor="password">Password:</label>
           <input type="password" id="password" required />
   
-          <button type="submit">Sign in</button>
+          <button id="butt" type="submit">Sign in</button>
           <div className="signup-link">
-            <p>
+            <p >
               Don't have an account? <Link to="/signup" id="signup-link">Sign Up</Link>
             </p>
           </div>
