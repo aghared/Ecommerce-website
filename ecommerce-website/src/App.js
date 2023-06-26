@@ -8,6 +8,8 @@ import { ProductPageHome  } from './pages/Product_Page_Home';
 import { ProductPage } from './pages/Product_Page';
 import { ShoppingCart } from './pages/ShoppingCart';
 import { CheckoutPage } from './pages/CheckoutPage';
+import { RegistrationPage } from './pages/RegistrationPage';
+
 
 function App() {
   return (
@@ -21,6 +23,7 @@ function App() {
     <Route path="/Product_Page/:id" exact element={<ProductPage/>} />
     <Route path="/checkout/" exact element={<CheckoutPage/>} />
     <Route path="/shoppingcart/" exact element={<ShoppingCart/>} />
+    <Route path="/signup" element={<RegistrationPage />} />
     
     
 

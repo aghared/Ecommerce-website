@@ -1,0 +1,42 @@
+  /* contact us styte */
+  .contact-form {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #f5f5f5;
+    border-radius: 5px;
+  }
+  
+  .contact-form h2 {
+    text-align: center;
+  }
+  
+  .contact-form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .contact-form button[type="submit"] {
+    width: 100%;
+    padding: 8px;
+    margin-top: 10px;
+    background-color: #c17979;
+    color: white;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .contact-form button[type="submit"]:hover {
+    background-color: #b96d6d;
+  }
+  

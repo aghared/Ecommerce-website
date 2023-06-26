@@ -4,7 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 //import Button from 'react-bootstrap/Button';
 //import Form from 'react-bootstrap/Form';
 
-import "./style2.css";
+import "../CSS/style2.css";
 //import "./Product_Page_Home_Style.css";
 
 import UserCart from "../componet/userCart";
