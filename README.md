@@ -1,3 +1,3 @@
 # eCommerce-website
-Form COPMPE 561 project 
+COMPE 561 project 
 ## project note 
