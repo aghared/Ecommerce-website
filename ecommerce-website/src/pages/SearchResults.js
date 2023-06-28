@@ -1,15 +1,29 @@
 import React from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import product from '../data/product-data.json' 
+import { useEffect } from 'react';
+//import product from '../data/product-data.json'
 
 const SearchResults = () => {
   const location = useLocation();
   const searchParams = new URLSearchParams(location.search); //used ChatGPT for help on these 3 lines
   const searchTerm = searchParams.get('term');
 
+  let [products, setProducts] = useState([])
+
+    useEffect(() => {
+        getProducts()
+
+    })
+    let getProducts = async () => {
+        let response = await fetch('/api/product/') 
+        let data = await response.json()
+
+        setProducts(data)
+    }
+
   //product filter
-  const filteredProducts = product.filter( item =>
+  const filteredProducts = products.filter( item =>
     item.productName.toLowerCase().includes(searchTerm.toLowerCase())
   );
 
