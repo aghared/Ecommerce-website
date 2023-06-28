@@ -3,7 +3,8 @@ import { Link } from 'react-router-dom';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/signin-page.css'
-export function SignInPage(){
+export function SignInPage(){ 
+  // sign in
 
     return (
         <div>
