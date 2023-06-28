@@ -5,7 +5,7 @@ class Product(models.Model):
     productImages = models.CharField(max_length=255)
     productName = models.CharField(max_length=255)
     productPrice = models.IntegerField()
-    prodcutDescription = models.CharField(max_length=255)
+    productDescription = models.CharField(max_length=255)
 
 
     
