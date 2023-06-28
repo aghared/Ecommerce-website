@@ -2,7 +2,7 @@ import React, { useEffect, useState} from 'react';
 import { useParams, Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/product-page.css'
-
+import product from '../data/product-data.json' 
 const ProductPage = ({ match }) =>  {
     const {id} = useParams()
 
