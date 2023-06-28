@@ -1,12 +1,11 @@
 from django.db import models
 
 # Create your models here.
-class product(models.Model):
-    id = models.TextField(null=True, blank=True)
-    productName = models.TextField(null=True, blank=True)
-    productPrice = models.TextField(null=True, blank=True)
-    productDescriptio = models.TextField(null=True, blank=True)
+class Product(models.Model):
+    productImages = models.CharField(max_length=255)
+    productName = models.CharField(max_length=255)
+    productPrice = models.IntegerField()
+    prodcutDescription = models.CharField(max_length=255)
 
 
-    def __str__(self):
-        return self.body[0:50]
+    
