@@ -1,7 +1,6 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import { useLocation } from 'react-router-dom';
 import { Link } from 'react-router-dom';
-import { useEffect } from 'react';
 //import product from '../data/product-data.json'
 
 const SearchResults = () => {
@@ -38,7 +37,7 @@ const SearchResults = () => {
                   ) :
                   filteredProducts.map(item => {
                     return(
-                      <Link to={"/Product_Page/"+item.id}><img src={item.image} alt={""}/></Link >       
+                      <Link to={"/Product_Page/"+item.id}><img src={item.productImages} alt={""}/></Link >       
                       )
                     }
                   )
