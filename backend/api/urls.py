@@ -3,7 +3,8 @@ from . import views
 
 
 urlpatterns = [
-    path("product/", views.product, name="product"),
-    path('', views.getData),
-    path('add/', views.addData)
+    path('', views.getProducts),
+    path('add/', views.addData),
+    path("product/", views.getProducts, name="product"),
+    path('product/<str:pk>/', views.getProduct, name='product')
 ]

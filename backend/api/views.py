@@ -14,11 +14,22 @@ def product(request):
     template = loader.get_template('myfirst.html')
     return HttpResponse(template.render())
 
-
 @api_view(['GET'])
-def getData(request):
+def getRoute(request):
+    routes = [
+
+    ]
+    return Response(routes)
+@api_view(['GET'])
+def getProducts(request):
     data = Product.objects.all()
     serializer = Serializer(data, many=True)
+    return Response(serializer.data)
+
+@api_view(['GET'])
+def getProduct(request, pk):
+    data = Product.objects.get(id=pk)
+    serializer = Serializer(data, many=False)
     return Response(serializer.data)
 
 @api_view(['POST'])
