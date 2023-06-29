@@ -1,0 +1,53 @@
+
+    [
+        {   
+            "model": "api.Product",
+            "pk": 1,
+            "fields": {
+                "productImage":"/assets/Products/sausage-thing.jpg",
+                "productName": "Item 0",
+                "prodcutPrice": 13,
+                "prodcutDescription": "This is Item 0"
+            }
+        },
+        {
+            "model": "api.Product",
+            "pk": 2,
+            "fields": {
+                "productImage":"/assets/Products/cake.jpeg",
+                "productName": "Item 1",
+                "prodcutPrice": 23,
+                "prodcutDescription": "This is Item 1"
+            }
+        },
+        {
+            "model": "api.Product",
+            "pk": 3,
+            "fields": {
+                "productImage":"/assets/Products/pasta.jpeg",
+                "productName": "Item 2",
+                "prodcutPrice": 33,
+                "prodcutDescription": "This is Item 2"
+            }
+        },
+        {
+            "model": "api.Product",
+            "pk": 4,
+            "fields": {
+                "productImage":"/assets/Products/pizza.jpeg",
+                "productName": "Item 3",
+                "prodcutPrice": 43,
+                "prodcutDescription": "This is Item 3"
+            }
+        },
+        {
+            "model": "api.Product",
+            "pk": 5,
+            "fields": {
+                "productImage":"/assets/Products/rice-and-noodles.jpeg",
+                "productName": "Item 4",
+                "prodcutPrice": 53,
+                "prodcutDescription": "This is Item 4"
+            }
+        }
+    ]

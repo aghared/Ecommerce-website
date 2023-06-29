@@ -1,27 +1,36 @@
-import React from 'react';
+import React, { useEffect, useState} from 'react';
 import '../CSS/Product_Page_Home_Style.css'
 import { Link } from 'react-router-dom';
-import product from '../data/product-data.json' 
+
 
 
 export function ProductPageHome(props){
     
-   // const prod = JSON.parse(product) 
-    return   (  
+    let [products, setProducts] = useState([])
+
+    useEffect(() => {
+        getProducts()
+
+    })
+    let getProducts = async () => {
+        let response = await fetch('/api/product/') 
+        let data = await response.json()
+
+        setProducts(data)
+    }
+     return   (  
     <React.Fragment>
     <div id="Recomendation">
         <h2 id="Recomendation"> Recomendation</h2>
         <div className ="scroll-container">
             <div id="scroll-container-Recomendation">
                 {
-                    product.map(item => { 
+                    products.map((product, index) => { 
                             return(
-                                <Link to={"/Product_Page/"+item.id}><img src={item.image} alt={""}/></Link >
+                                <Link key={index} to={"/Product_Page/"+product.id}><img src={product.productImages} alt={""}/></Link >
                             )
-
                         } 
                     )
-
                 }
                             
             </div>       
@@ -32,21 +41,17 @@ export function ProductPageHome(props){
         <div className = "scroll-container">
             <div id="scroll-container-History">
                 {
-                    product.map(item => { 
+                    products.map((product, index) => { 
                            
                             return(
-                                <Link to={"/Product_Page/"+item.id} ><img src={item.image} alt={""}/></Link >
+                                <Link key={index} to={"/Product_Page/"+product.id} ><img src={product.productImages} alt={""}/></Link >
                             )
-
                         } 
                     )
-
                 }
             </div>
-            
         </div> 
     </div>
-   
     </React.Fragment>
     )
 }
