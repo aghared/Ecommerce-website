@@ -4,16 +4,16 @@ body {
  
 }
 
-h2.Recomendation {
-    text-align: center;
+#Recomendation {
+    text-align: left;
 }
-h2.history {
-    text-align: center;
+#history {
+    text-align: left;
 }
-div.Recomendation{
+.Recomendation{
     background-color: white;
 }
-div.history {
+.history {
     background-color: white;
 }
 .scroll-container{
@@ -24,7 +24,14 @@ div.history {
     padding: 10px;
 }
 .scroll-container img{
-    padding: 10px;
+    padding: 5px;
     width:  200px;
     height: 200px;
+}
+
+#Recomendation{
+    padding: 10px;
+}
+#history{
+    padding: 10px;
 }
