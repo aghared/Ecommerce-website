@@ -18,7 +18,7 @@ export function CheckoutPage() {
         <h2 className="text-center mt-5">Checkout</h2>
 
         <form> {/* green border around payment method with margins and padding */}
-          <div className="border border-success-subtle border-2 p-3 mt-3">
+          <div className="border border-dark border-2 p-3 mt-3">
               <h3>Payment Method</h3>
 
               <div className="mb-3"> {/* cardholder name with placeholder */}
@@ -45,7 +45,7 @@ export function CheckoutPage() {
           </div>
 
           {/* shipping information with green border of thickness 2 and margins + padding */}
-          <div className="border border-success-subtle border-2 p-3 my-3">
+          <div className="border border-dark border-2 p-3 my-3">
               <h3>Shipping Information</h3>
 
               <div className="row"> {/* col is used so that first and last name fit on the same line */}
@@ -91,7 +91,7 @@ export function CheckoutPage() {
           {/* d-flex and justify-content-end is used to push the buttons to the right */}  
           <div className="d-flex justify-content-end"> 
             {/* the confirm button is supposed to take the information and put it somewhere */}
-            <button type="submit" className="btn btn-success mx-1">Confirm</button>
+            <button type="submit" className="btn mx-1 custom-btn">Confirm</button>
             {/* the return cart is supposed to send back to the shopping cart page */}
             <Link to="/" className="btn btn-secondary mx-1">Return to Cart</Link>
           </div>

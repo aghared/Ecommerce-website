@@ -7,6 +7,22 @@
     color: #ffcccc; /* this is a soft red */
 }
 
+.custom-btn {
+    background-color: #ac6868;
+    color: white;
+}
+
+.right-align {
+    display: flex;
+    justify-content: flex-end;  
+}
+
+.right-align-button {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
 .custom-margin {
     margin-top: 100px;
 }

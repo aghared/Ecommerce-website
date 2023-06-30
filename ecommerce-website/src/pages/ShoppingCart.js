@@ -20,28 +20,27 @@ export function ShoppingCart() {
 
 
     useEffect(() => {
-        //obtains the user based on the userID
-        const user = data.users.find((user) => user.id === userId);
-        //initialize the variables and set them to 0 so that they are ready for summations
-        let totalItems = 0;
-        let totalPrice = 0;
-
-        //react for loop to iterate through each item in the user's cart
-        user.cart.forEach((item) => {
-            //obtains the product based on the item.productID so that we can obtain the price
-            const product = data.products.find((product) => product.id === item.productId);
-            //item quantity is found from the user's cart and is then multiplied to obtain total price
-            totalItems += item.quantity;
-            totalPrice += product.price * item.quantity;
+        fetch('http://localhost:8000/api/users/1/')
+        .then(response => response.json())
+        .then(data => {
+            let totalItems = 0;
+            let totalPrice = 0;
+    
+            //react for loop to iterate through each item in the user's cart
+            data.cart.forEach((item) => {
+                //item quantity is found from the user's cart and is then multiplied to obtain total price
+                totalItems += item.quantity;
+                totalPrice += item.product.productPrice * item.quantity;
+            });
+    
+            setTotalItems(totalItems);
+            setTotalPrice(totalPrice);
+            setUserCart(data.cart);
         });
-
-        setTotalItems(totalItems);
-        setTotalPrice(totalPrice);
-        
-    }, [userId]);
+    }, [totalItems]);
 
     //delete task
-    //set the userCart state
+    //set the userCart state and method
     const [userCart, setUserCart] = useState([]);
 
     //when you fetch data or when userId changes, update userCart.
@@ -50,11 +49,24 @@ export function ShoppingCart() {
         setUserCart(user.cart);
     }, [userId]);
 
-    const deleteTask = (productId) => {
-        console.log('delete', productId)
-        const newUserCart = userCart.filter((item) => item.productId !== productId)
-        setUserCart(newUserCart);
-    }
+    const deleteTask = async (index) => {
+        const cartId = userCart[index].id; // Get the cart item ID based on the index
+        console.log(cartId)
+
+        const itemToDelete = await fetch(`http://localhost:8000/api/cart/${cartId}/`, {
+        method: 'DELETE',
+        });
+      
+        //update the user cart with item deleted
+        const updatedUserCart = userCart.filter(item => item.id !== cartId);
+        const updatedTotalItems = updatedUserCart.reduce((total,item) => total + item.quantity, 0); //i got this from a post i found on stackoverflow
+        const updatedTotalPrice = updatedUserCart.reduce((total,item) => total + (item.price * item.quantity), 0); //i got this from a post i found on stackoverflow
+
+        //update the totals
+        setUserCart(updatedUserCart);
+        setTotalItems(updatedTotalItems);
+        setTotalPrice(updatedTotalPrice);
+      };
 
 
     return (
@@ -62,7 +74,7 @@ export function ShoppingCart() {
         
         {/* the custom margin pushes the shopping cart box down by 100px */}
         <div className="container custom-margin"> {/* green border */}
-            <div className="border border-success-subtle border-2 py-3 mb-4">
+            <div className="border border-dark border-2 py-3 mb-4">
                 
                 <h1 className="text-center">Shopping Cart</h1>
                 <table className="table table-striped"> 
@@ -78,21 +90,23 @@ export function ShoppingCart() {
                 <tbody id="cart-table-body">
                     {/* Cart items will be inserted here using some javascript and json */}
                     {/* below we include usercart and the userID to display their cart*/}
-                    <UserCart userId={userId} data={data} deleteTask={deleteTask}/>
+                    <UserCart userCart={userCart} deleteTask={deleteTask}/>                
                 </tbody>
                 </table>
             </div>
             {/* total price should show accumulated price and item quantity should show total items */}
 
-            <div className="total-price">
-                <h3>Total: $<span id="total-price">{totalPrice.toFixed(2)}</span></h3>
-                <h6>Item quantity: {totalItems}</h6>
+            <div className="right-align">
+                <div className="total-price">
+                    <h3>Total: $<span id="total-price">{totalPrice.toFixed(2)}</span></h3>
+                    <h4>Item quantity: {totalItems}</h4>
+                </div>
+                
+                {/* checkout button but it still needs to link to the checkout page */}               
             </div>
-            
-            {/* checkout button but it still needs to link to the checkout page */}
-            <div className="checkout-button">
-                <Link to="/checkout" className="btn btn-success">Head to Checkout</Link>
-            </div>
+            <div className="checkout-button, right-align-button">
+                    <Link to="/checkout" className="btn custom-btn">Head to Checkout</Link>
+            </div> 
         </div>
 
 
