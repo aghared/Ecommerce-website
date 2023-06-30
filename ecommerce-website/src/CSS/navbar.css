@@ -1,4 +1,9 @@
 /* to style the logo */
+#logo{
+    width: 75px;
+    height: 50px;
+    
+}
 .ecumenic {
     display: flex;
     float: left;
@@ -19,6 +24,7 @@
     /* Set the background color of the navbar */
     overflow: hidden;
     /* Hide any content that overflows from the navbar */
+   
 }
 
 .navbar a {
@@ -44,6 +50,7 @@
 /* CSS for search bar styling */
 .search-bar {
     display: flex;
+    padding: 10px;
     /* Display the search bar and button in a row */
     align-items: center;
     /* Align items vertically within the search bar */
@@ -55,6 +62,7 @@
     width: 400%;
     /* Take up the full width available within the search bar container */
     padding: 8px;
+
     /* Add some padding to the input field */
     border: 1px solid #ccc;
     /* Add a border to the input field */
@@ -91,3 +99,14 @@
     padding: 20px;
     width: 300px;
 }
+
+.custom-button {
+    font-size: 18px;
+    padding: 12px 24px;
+  }
+
+  .company-name {
+    font-family: 'Great Vibes', cursive;
+    font-size: 24px;
+    font-weight: bold;
+  }

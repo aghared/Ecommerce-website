@@ -18,17 +18,17 @@ const Navbar = () => {
   
     return (
       <div>
-        <div className="ecumenic">
-          <p>eCommerce3</p>
+        <div className="ecumenic mt-3 company-name">
+          <img id="logo" src={"../assets/Products/eggscellent_logo_.png"} alt={""}></img>
         </div>
         <div className="search-bar">
           <input type="text" className="search-input" placeholder="Search..." value={searchInput} onChange={searchChange}
           />
-          <button className="search-button" onClick={startSearch}>
+          <button className="search-button custom-button" onClick={startSearch}>
             Search
           </button>
         </div>
-        <div className="navbar">
+        <div className="navbar custom-button">
           <Link to="/home">Home</Link>
           <Link to="/about">About</Link>
           <Link to="/">Sign In</Link>
