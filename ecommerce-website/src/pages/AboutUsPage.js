@@ -1,8 +1,9 @@
 import React from 'react';
+import '../CSS/about.css'
 
 export const AboutUsPage = () => {
   return (
-    <div>
+    <div class= "about-us-container">
       <h1>About Us</h1>
       <p>
         Welcome to our eCommerce store! We specialize in providing high-quality food diet products to support your healthy lifestyle.
