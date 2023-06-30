@@ -1,25 +1,28 @@
-/* footer page style */
-
+/* set the footer to have a gray background color and some padding to add size*/
 footer {
-    background-color: #f5f5f5;
-    padding: 20px;
-    position: fixed;
-    bottom: 10px;
+  background-color: #f5f5f5;
+  padding: 20px;
+  position: fixed;/* fix the footer to the bottom of the page */
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
+/*this is to align the content within the footer*/
 .footer-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer-content p {
-    margin: 0;
-  }
-  
-  .footer-content nav a {
-    text-decoration: none;
-    color: #333;
-    margin-left: 10px;
-  }
-  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* removes the margin from p contents so that it doesn't add size to the footer */
+.footer-content p {
+  margin: 0;
+}
+
+/*styling for the contact us link*/
+.footer-content nav a {
+  text-decoration: none;
+  color: blue;
+  margin-left: 10px;
+}

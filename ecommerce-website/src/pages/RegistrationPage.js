@@ -1,26 +1,10 @@
 import React from 'react';
-import "../CSS/sign-page.css"
-//import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
+import '../CSS/sign-page.css';
 
 export const RegistrationPage = () => {
   return (
     <div>
-      {/*
-      <header>
-        <h1>eCommerce-website</h1>
-        <br />
-        <nav className="navbar">
-          <Link to="/">Home</Link>
-           <a href="Product_Page_Home.html">Product</a>
-          <a href="#about">About</a>
-          <a href="#services">Services</a>
-          <a href="shoppingCart.html">Cart</a>
-          <a href="#contact">Contact Us</a>
-          <a href="userProfile.html">User Profile</a> 
-        </nav>
-        <br />
-      </header>
-        */}
       <div className="registration-form">
         <h2>Create an Account</h2>
         <form id="registration-form">
@@ -40,11 +24,13 @@ export const RegistrationPage = () => {
             <option value="none">None</option>
           </select>
 
-          <button type="submit">Register</button>
+          <Link to="/home">
+            <button type="submit">Register</button>
+          </Link>
         </form>
       </div>
     </div>
   );
 };
 
-//export default RegistrationPage;
+export default RegistrationPage;
