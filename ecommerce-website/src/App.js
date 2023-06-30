@@ -12,8 +12,8 @@ import { CheckoutPage } from './pages/CheckoutPage';
 import { RegistrationPage } from './pages/RegistrationPage';
 import { ContactUsPage } from './pages/ContactUsPage';
 import { SignInPage } from './pages/SignInPage';
-import SearchResults from './pages/SearchResults';
 import { AboutUsPage } from './pages/AboutUsPage';
+import SearchResults from './pages/SearchResults';
 
 
 function App() {
@@ -33,6 +33,8 @@ function App() {
     <Route path="/" element={<SignInPage />} />
     <Route path="/search" element={<SearchResults />} />
     <Route path="/about" element={<AboutUsPage />} />
+    
+
 
     
     
