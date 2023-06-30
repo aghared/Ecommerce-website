@@ -42,9 +42,11 @@ export function ShoppingCart() {
     const deleteTask = async (index) => {
         const cartId = userCart[index].id; //get the cart item ID based on the index
         console.log(cartId)
-
-        const itemToDelete = await fetch(`http://localhost:8000/api/cart/${cartId}/`, {
+        fetch(`/api/cart/${cartId}/delete/`, {
         method: 'DELETE',
+        'headers':{
+            'Content-Type': 'apllication/json'
+        }
         });
       
         //update the user cart with item deleted
