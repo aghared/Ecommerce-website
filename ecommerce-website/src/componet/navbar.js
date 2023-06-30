@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
       <div>
         <div className="ecumenic mt-3 company-name">
-          <p>Eggscelent</p>
+          <img id="logo" src={"../assets/Products/eggscellent_logo_.png"} alt={""}></img>
         </div>
         <div className="search-bar">
           <input type="text" className="search-input" placeholder="Search..." value={searchInput} onChange={searchChange}

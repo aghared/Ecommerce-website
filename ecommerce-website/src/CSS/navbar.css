@@ -1,4 +1,9 @@
 /* to style the logo */
+#logo{
+    width: 75px;
+    height: 50px;
+    
+}
 .ecumenic {
     display: flex;
     float: left;
