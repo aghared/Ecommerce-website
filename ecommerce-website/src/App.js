@@ -14,7 +14,6 @@ import { ContactUsPage } from './pages/ContactUsPage';
 import { SignInPage } from './pages/SignInPage';
 import { AboutUsPage } from './pages/AboutUsPage';
 import SearchResults from './pages/SearchResults';
-import { AboutUsPage } from './pages/AboutUsPage';
 
 
 function App() {
