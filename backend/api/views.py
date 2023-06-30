@@ -39,12 +39,7 @@ def addData(request):
     if serializer.is_valid():
         serializer.save()
     return Response(serializer.data)
-@api_view(['POST'])
-def addCart(request):
-    serializer = Serializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-    return Response(serializer.data)
+
 @api_view(['GET'])
 def UserViewSet(request):
     data = User.objects.all()
@@ -65,6 +60,12 @@ def CartView(request, pk):
     data = Cart.objects.get(id=pk)
     serializer_class = CartSerializer(data, many=False )
     return Response(serializer_class.data)
+@api_view(['POST'])
+def addCart(request):
+    serializer = CartSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
 @api_view(['DELETE'])
 def deleteCart(request, pk):
     data = Cart.objects.get(id=pk)

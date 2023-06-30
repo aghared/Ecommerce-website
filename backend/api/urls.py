@@ -21,5 +21,8 @@ urlpatterns = [
     path('product/<str:pk>/', views.getProduct, name='product'),
     path('', include(router.urls)),
     path('api/', include(router.urls)),
+    
+
+
 
 ]
