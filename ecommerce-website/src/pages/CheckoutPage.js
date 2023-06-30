@@ -93,7 +93,7 @@ export function CheckoutPage() {
             {/* the confirm button is supposed to take the information and put it somewhere */}
             <button type="submit" className="btn mx-1 custom-btn">Confirm</button>
             {/* the return cart is supposed to send back to the shopping cart page */}
-            <Link to="/" className="btn btn-secondary mx-1">Return to Cart</Link>
+            <Link to="/shoppingcart" className="btn btn-secondary mx-1">Return to Cart</Link>
           </div>
       </form>
 
