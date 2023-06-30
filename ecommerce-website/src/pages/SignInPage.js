@@ -19,7 +19,9 @@ export function SignInPage(){
               <label id="user" htmlFor="password">Password:</label>
               <input type="password" id="input" required />
       
-              <button id="butt" type="submit">Sign in</button>
+              <Link to="/home">
+                <button id="butt" type="submit">Sign in</button>
+              </Link>             
               <div className="signup-link">
                 <p>
                   Don't have an account? <Link to="/signup" id="signup-link">Sign Up</Link>
