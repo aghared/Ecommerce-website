@@ -1,27 +1,39 @@
-import React from "react";
-//import data from "../data/db.json";
+import React, { useState, useEffect } from "react";
 
-export function UserCart({userId, data, deleteTask}) {
-  const user = data.users.find((user) => user.id === userId);
+export function UserCart({ userId, deleteTask }) {
+  const [user, setUser] = useState(null);
+
+  useEffect(() => {
+    // Fetch the user data when the component mounts
+    fetch(`http://localhost:8000/api/users/${userId}/`)
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        setUser(data);
+      })
+      .catch(error => {
+        console.error('Error fetching data: ', error);
+        setUser(null);
+      })
+  }, [userId]);
+
   if (!user) {
     return null;
   }
 
   return (
     user.cart.map((item, index) => {
-      const product = data.products.find((product) => product.id === item.productId);
-      
-      if (!product) {
-        return null;
-      }
-
       return (
         <tr key={index}>
-          <td>{product.name}</td>
+          <td>{item.product.productName}</td>
           <td>{item.quantity}</td>
-          <td>${product.price * item.quantity}</td>
+          <td>${item.product.productPrice * item.quantity}</td>
           <td>
-            <button onClick={() => deleteTask(item.productId)}>X</button>
+            <button onClick={() => deleteTask(item.product.id)}>X</button>
           </td>
         </tr>
       )
@@ -30,4 +42,3 @@ export function UserCart({userId, data, deleteTask}) {
 }
 
 export default UserCart;
-
