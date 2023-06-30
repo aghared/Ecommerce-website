@@ -1,8 +1,15 @@
+/* for aside bar */
+.sign_container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
 .aside-bar {
-    float: right;
+    /* float: right; */
     background-color: #f8f9fa;
     padding: 20px;
-    width: 300px;
+    width: 400px;
 }
 
 #sign {
