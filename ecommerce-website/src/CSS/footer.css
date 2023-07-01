@@ -1,11 +1,11 @@
 /* set the footer to have a gray background color and some padding to add size*/
 footer {
   background-color: #f5f5f5;
-  padding: 20px;
+  padding: 8px;
   position: fixed;/* fix the footer to the bottom of the page */
   bottom: 0;
   left: 0;
-  width: 100%;
+  width: 33%;
 }
 
 /*this is to align the content within the footer*/

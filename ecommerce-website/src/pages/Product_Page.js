@@ -49,7 +49,7 @@ const ProductPage = ({ match }) =>  {
                     </select>
                     
                     <div className="add-cart-btn">
-                        <Link to="/shoppingcart" className="btn btn-success" onClick={addCart}>Add Cart</Link>
+                        <Link to="/shoppingcart" className="btn custom-btn" onClick={addCart}>Add Cart</Link>
                     </div>
                 </form>
            
