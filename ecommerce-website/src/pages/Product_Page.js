@@ -6,21 +6,21 @@ import '../CSS/product-page.css'
 const ProductPage = ({ match }) =>  {
     const userId = 1;
     const {id} = useParams()
-
     let [product, setProduct] = useState(null)
+ 
 
     useEffect(() => {
         getProduct()
 
     })
     let getProduct = async () => {
-        let response = await fetch(`/api/product/add/${id}`) 
+        let response = await fetch(`/api/product/${id}`) 
         let data = await response.json()
 
         setProduct(data)
     }
-    const addCart = async (index) => {
-       
+    const addCart = async () => {
+        
         fetch(`/api/product/add/${userId}/${id}/`, {
         method: 'POST',
         'headers':{
@@ -42,10 +42,10 @@ const ProductPage = ({ match }) =>  {
             <div className="add-cart">
                 <form >
                     <label id={"qty-lable"} for="Qty"> Qty</label>
-                    <select name="Qty" id="Qty">
+                    <select name="Qty" className="Qty" >
                         <option value="1">1</option>
-                        <option value="1">2</option>
-                        <option value="1">3</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
                     </select>
                     
                     <div className="add-cart-btn">
