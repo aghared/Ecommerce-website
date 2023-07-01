@@ -4,6 +4,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import '../CSS/product-page.css'
 
 const ProductPage = ({ match }) =>  {
+    const userId = 1;
     const {id} = useParams()
 
     let [product, setProduct] = useState(null)
@@ -13,10 +14,19 @@ const ProductPage = ({ match }) =>  {
 
     })
     let getProduct = async () => {
-        let response = await fetch(`/api/product/${id}`) 
+        let response = await fetch(`/api/product/add/${id}`) 
         let data = await response.json()
 
         setProduct(data)
+    }
+    const addCart = async (index) => {
+       
+        fetch(`/api/product/add/${userId}/${id}/`, {
+        method: 'POST',
+        'headers':{
+            'Content-Type': 'application/json'
+        }
+        });
     }
     return (
     
@@ -39,7 +49,7 @@ const ProductPage = ({ match }) =>  {
                     </select>
                     
                     <div className="add-cart-btn">
-                        <Link to="/shoppingcart" className="btn btn-success">Add Cart</Link>
+                        <Link to="/shoppingcart" className="btn btn-success" onClick={addCart}>Add Cart</Link>
                     </div>
                 </form>
            

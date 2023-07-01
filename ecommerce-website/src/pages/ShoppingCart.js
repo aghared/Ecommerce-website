@@ -6,7 +6,7 @@ import "../CSS/style2.css";
 //import "./Product_Page_Home_Style.css";
 import UserCart from "../componet/userCart";
 import { Link } from "react-router-dom";
-import data from '../data/db.json';
+
 
 export function ShoppingCart() {
     const userId = 1; //set the userID to 1 just so we can go through the code, ideally this would be fetched based on login
@@ -45,7 +45,7 @@ export function ShoppingCart() {
         fetch(`/api/cart/${cartId}/delete/`, {
         method: 'DELETE',
         'headers':{
-            'Content-Type': 'apllication/json'
+            'Content-Type': 'application/json'
         }
         });
       

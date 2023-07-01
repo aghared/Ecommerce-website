@@ -61,11 +61,10 @@ def CartView(request, pk):
     serializer_class = CartSerializer(data, many=False )
     return Response(serializer_class.data)
 @api_view(['POST'])
-def addCart(request):
-    serializer = CartSerializer(data=request.data)
-    if serializer.is_valid():
-        serializer.save()
-    return Response(serializer.data)
+def addCart(request,user_id, product_id):
+    cart = Cart(user_id=user_id, product_id= product_id, quantity = 3)
+    cart.save() 
+    
 @api_view(['DELETE'])
 def deleteCart(request, pk):
     data = Cart.objects.get(id=pk)
