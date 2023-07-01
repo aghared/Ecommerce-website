@@ -40,15 +40,47 @@ def addData(request):
         serializer.save()
     return Response(serializer.data)
 
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = User.objects.all()
-    serializer_class = UserSerializer
+@api_view(['GET'])
+def UserViewSet(request):
+    data = User.objects.all()
+    serializer_class = UserSerializer(data, many=True )
+    return Response(serializer_class.data)
+@api_view(['GET'])
+def UserView(request, pk):
+    data = User.objects.get(id=pk)
+    serializer_class = UserSerializer(data, many=False )
+    return Response(serializer_class.data)
+@api_view(['GET'])
+def CartViewSet(request):
+    data = Cart.objects.all()
+    serializer_class = CartSerializer(data, many=True )
+    return Response(serializer_class.data)
+@api_view(['GET'])
+def CartView(request, pk):
+    data = Cart.objects.get(id=pk)
+    serializer_class = CartSerializer(data, many=False )
+    return Response(serializer_class.data)
+@api_view(['POST'])
+def addCart(request):
+    serializer = CartSerializer(data=request.data)
+    if serializer.is_valid():
+        serializer.save()
+    return Response(serializer.data)
+@api_view(['DELETE'])
+def deleteCart(request, pk):
+    data = Cart.objects.get(id=pk)
+    data.delete()
+    return Response("cart deleted")
 
-class CartViewSet(viewsets.ModelViewSet):
-    queryset = Cart.objects.all()
-    serializer_class = CartSerializer
+#class UserViewSet(viewsets.ModelViewSet):
+#    queryset = User.objects.all()
+#    serializer_class = UserSerializer
 
-    def destroy(self, request, *args, **kwargs):
-        cart_item = self.get_object()
-        cart_item.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+#class CartViewSet(viewsets.ModelViewSet):
+#    queryset = Cart.objects.all()
+#    serializer_class = CartSerializer
+
+#    def destroy(self, request, *args, **kwargs):
+#3        cart_item = self.get_object()
+#        cart_item.delete()
+#        return Response(status=status.HTTP_204_NO_CONTENT)
