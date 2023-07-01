@@ -64,7 +64,7 @@ def CartView(request, pk):
 def addCart(request,user_id, product_id):
     cart = Cart(user_id=user_id, product_id= product_id, quantity= 3)
     cart.save() 
-    
+    return HttpResponse("added to cart")
 @api_view(['DELETE'])
 def deleteCart(request, pk):
     data = Cart.objects.get(id=pk)
