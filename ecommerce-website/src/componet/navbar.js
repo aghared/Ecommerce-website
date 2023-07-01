@@ -18,6 +18,9 @@ const Navbar = () => {
   
     return (
       <div>
+         <div className="header">
+            <h1 className="header-title">eCommerce website</h1>
+          </div>
         <div className="ecumenic mt-3 company-name">
           <img id="logo" src={"../assets/Products/eggscellent_logo_.png"} alt={""}></img>
         </div>
@@ -30,7 +33,7 @@ const Navbar = () => {
         </div>
         <div className="navbar custom-button">
           <Link to="/home">Home</Link>
-          <Link to="/about">About Us</Link> 
+          <Link to="/about">About Us</Link>
           <Link to="/">Sign In</Link>
           <Link to="/shoppingcart">Cart</Link>
           <Link to="/contact">Contact Us</Link>

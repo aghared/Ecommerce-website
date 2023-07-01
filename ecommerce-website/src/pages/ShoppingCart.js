@@ -13,7 +13,7 @@ export function ShoppingCart() {
     const [totalItems, setTotalItems] = useState(0);
     const [totalPrice, setTotalPrice] = useState(0);
     useEffect(() => {
-        fetch('http://localhost:8000/api/users/1/')
+        fetch(`/api/users/${userId}/`)
         .then(response => response.json())
         .then(data => {
             let totalItems = 0;
@@ -35,16 +35,18 @@ export function ShoppingCart() {
     const [userCart, setUserCart] = useState([]);
 
     //when you fetch data or when userId changes, update userCart.
-    useEffect(() => {
-        const user = data.users.find((user) => user.id === userId);
-        setUserCart(user.cart);
-    }, [userId]);
+    //useEffect(() => {
+    //    const user = data.users.find((user) => user.id === userId);
+    //    setUserCart(user.cart);
+    //}, [userId]);
     const deleteTask = async (index) => {
         const cartId = userCart[index].id; //get the cart item ID based on the index
         console.log(cartId)
-
-        const itemToDelete = await fetch(`http://localhost:8000/api/cart/${cartId}/`, {
+        fetch(`/api/cart/${cartId}/delete/`, {
         method: 'DELETE',
+        'headers':{
+            'Content-Type': 'apllication/json'
+        }
         });
       
         //update the user cart with item deleted
