@@ -16,3 +16,8 @@
 #qty-lable{
     padding-right: 10px;
 }
+
+.custom-btn {
+    background-color: #ac6868;
+    color: white;
+}

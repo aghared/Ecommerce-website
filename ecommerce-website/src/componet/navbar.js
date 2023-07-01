@@ -19,7 +19,7 @@ const Navbar = () => {
     return (
       <div>
          <div className="header">
-            <h1 className="header-title">eCommerce website</h1>
+            <h4 className="header-title">Eggscellent</h4>
           </div>
         <div className="ecumenic mt-3 company-name">
           <img id="logo" src={"../assets/Products/eggscellent_logo_.png"} alt={""}></img>
