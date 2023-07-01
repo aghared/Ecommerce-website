@@ -110,3 +110,15 @@
     font-size: 24px;
     font-weight: bold;
   }
+/* for the header */
+  .header-title  {
+    color: #680909;
+    background-color: rgba(0, 195, 255, 0.349);
+    background-image: url(imag/v546batch3-mynt-34-badgewatercolor_1.jpg);
+    padding: 10px;
+    margin: 5px;
+    border: 3px solid;
+    border-color: brown gold (117, 123, 41, 0.655) rgb(224, 94, 87) gold;
+    border-style: outset;
+
+} 
