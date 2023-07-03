@@ -1,0 +1,28 @@
+<!-- signup.html -->
+
+<div>
+    <div class="registration-form">
+    <h2>Create an Account</h2>
+    <form id="registration-form" method="POST">
+        {% csrf_token %}
+        
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" required>
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+        
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+        
+        <label for="diet-plan">Preferred Diet Plan:</label>
+        <select id="diet-plan" name="diet-plan">
+        <option value="cutting">Cutting</option>
+        <option value="bulking">Bulking</option>
+        <option value="none">None</option>
+        </select>
+        
+        <button type="submit">Register</button>
+    </form>
+    </div>
+</div>
