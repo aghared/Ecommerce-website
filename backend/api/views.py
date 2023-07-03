@@ -62,7 +62,7 @@ def CartView(request, pk):
     return Response(serializer_class.data)
 @api_view(['POST'])
 def addCart(request,user_id, product_id):
-    cart = Cart(user_id=user_id, product_id= product_id, quantity= 3)
+    cart = Cart(user_id=user_id, product_id= product_id, quantity= 1)
     cart.save() 
     return HttpResponse("added to cart")
 @api_view(['DELETE'])
